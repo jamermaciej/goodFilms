@@ -21,6 +21,7 @@
 }
 .close {
     position: absolute;
+    cursor: pointer;
     top: 15px;
     right: 15px;
     width: 20px;
@@ -49,8 +50,16 @@
 }
 .film-detail {
     display: flex;
+    justify-content: center;
+    padding-top: 30px;
 
     .film-detail-content {
         padding-left: 15px;
+
+        p,
+        h2 {
+            -webkit-font-smoothing: antialiased;
+            font-family: 'Montserrat', sans-serif;
+        }
     }
 }
