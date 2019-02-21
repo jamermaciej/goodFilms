@@ -1,0 +1,6 @@
+<div class="modal-wrapper">
+  {{ film.title }}
+  <img *ngIf="film.poster_path" src="http://image.tmdb.org/t/p/w300{{ film.poster_path }}">
+  <button (click)="closeModal()" class="close">x</button>
+</div>
+<div class="modal-overlay"></div>
