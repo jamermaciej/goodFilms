@@ -57,6 +57,7 @@ export class AppComponent implements OnInit {
     this.httpService.getFilms(this.query, this.page).subscribe( films => {
         this.films = films;
         this.maxPage = Math.ceil(this.films.total_results / 20);
+        console.log(this.films);
       });
   }
 

@@ -1,6 +1,6 @@
 <div class="search-panel" [ngClass]="{ 'up': films?.total_results > 0 }">
     <h1>Good films</h1>
-    <input [formControl]="queryField" placeholder="Search film">
+    <input [formControl]="queryField" placeholder="Find Movies">
     <span *ngIf="films && films.total_results > 0; else noresults">
       {{ films?.total_results }} results
     </span>

@@ -1,6 +1,14 @@
 <div class="modal-wrapper">
-  {{ film.title }}
-  <img *ngIf="film.poster_path" src="http://image.tmdb.org/t/p/w300{{ film.poster_path }}">
-  <button (click)="closeModal()" class="close">x</button>
+  <div class="film-detail">
+      <img *ngIf="film.poster_path" src="http://image.tmdb.org/t/p/w300{{ film.poster_path }}">
+      <div class="film-detail-content">
+          <h2>{{ film.title }}</h2>
+          <p><strong>Votes: </strong>{{ film.vote_count }}</p>
+          <p><strong>Vote average: </strong>{{ film.vote_average }}</p>
+          <p><strong>Release date: </strong>{{ film.release_date }}</p>
+          <p>{{ film.overview }}</p>
+      </div>
+  </div>
+  <button (click)="closeModal()" class="close"></button>
 </div>
 <div class="modal-overlay"></div>
