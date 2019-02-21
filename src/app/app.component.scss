@@ -14,12 +14,13 @@ img {
           flex-direction: column;
           align-items: center;
           margin-bottom: 50px;
+          color: #FFF;
      }
 }
 input {
      border: 0;
      outline: none;
-     border-bottom: 1px solid rgb(61, 47, 12);
+     border-bottom: 1px solid #FFF;
      background: none;
      width: 600px;
      font-size: 20px;
@@ -29,9 +30,10 @@ input {
      margin: 70px 0 0;
      transition: margin .5s ease-in-out;
      will-change: margin;
+     color: #FFF;
 
      &::placeholder {
-          color: black;
+          color: #FFF;
           font-style: italic;
      }
      &:focus {
@@ -52,6 +54,7 @@ input {
           font-size: 60px;
           font-family: 'Roboto', sans-serif;
           font-weight: 600;
+          color: #FFF;
      }
      span {
           margin: 10px 0;

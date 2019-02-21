@@ -1,6 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 
 body {
-    background: lightcoral;
+    background-color: #000;
+    background-image: url('./assets/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: top center;
 }
 
