@@ -16,6 +16,10 @@ img {
           align-items: center;
           margin-bottom: 50px;
           color: #FFF;
+
+          h2 {
+               font-family: 'Montserrat', sans-serif;
+          }
      }
 }
 input {
@@ -37,6 +41,7 @@ input {
      &::placeholder {
           color: #FFF;
           font-style: italic;
+          font-family: 'Montserrat', sans-serif;
      }
      &:focus {
           outline: none;
@@ -62,6 +67,7 @@ input {
      span {
           margin: 10px 0;
           color: #FFF;
+          font-family: 'Montserrat', sans-serif;
      }
 
      &.up {
@@ -81,6 +87,7 @@ input {
      display: none;
 }
 button {
+     cursor: pointer;
      background: none;
      width: 100px;
      line-height: 30px;
