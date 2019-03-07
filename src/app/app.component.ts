@@ -3,7 +3,7 @@ import { FormControl } from '@angular/forms';
 import { distinctUntilChanged, map } from 'rxjs/operators';
 import { debounceTime } from 'rxjs/operators';
 import { HttpService } from './services/http.service';
-import { Component, OnInit, ComponentFactoryResolver, ViewContainerRef, ViewChild } from '@angular/core';
+import { Component, OnInit, ComponentFactoryResolver, ViewContainerRef, ViewChild, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -25,7 +25,8 @@ export class AppComponent implements OnInit {
 
   constructor(private httpService: HttpService,
               private componentFactoryResolver: ComponentFactoryResolver,
-              private viewContainerRef: ViewContainerRef
+              private viewContainerRef: ViewContainerRef,
+              private renderer: Renderer2
             ) { }
 
   ngOnInit() {
@@ -67,8 +68,10 @@ export class AppComponent implements OnInit {
     componentRef.instance.film = film;
     componentRef.instance.output.subscribe( () => {
       componentRef.destroy();
+      this.renderer.removeClass(document.body, 'modal-open');
     });
     componentRef.changeDetectorRef.detectChanges();
+    this.renderer.addClass(document.body, 'modal-open');
   }
 
   closeModal() {
