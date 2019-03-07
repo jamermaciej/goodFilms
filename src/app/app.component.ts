@@ -3,7 +3,8 @@ import { FormControl } from '@angular/forms';
 import { distinctUntilChanged, map } from 'rxjs/operators';
 import { debounceTime } from 'rxjs/operators';
 import { HttpService } from './services/http.service';
-import { Component, OnInit, ComponentFactoryResolver, ViewContainerRef, ViewChild, Renderer2 } from '@angular/core';
+import { Component, OnInit, ComponentFactoryResolver, ViewContainerRef, ViewChild, Renderer2, Inject } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -23,7 +24,8 @@ export class AppComponent implements OnInit {
 
   queryField = new FormControl;
 
-  constructor(private httpService: HttpService,
+  constructor(@Inject(DOCUMENT) document,
+              private httpService: HttpService,
               private componentFactoryResolver: ComponentFactoryResolver,
               private viewContainerRef: ViewContainerRef,
               private renderer: Renderer2
